@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "potionfoods:long_invisibility_mutton"
+  },
+  "result": "minecraft:cooked_mutton",
+  "experience": 0.35,
+  "cookingtime": 100
+}

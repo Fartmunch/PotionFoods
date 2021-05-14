@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "potionfoods:poison_potato"
+  },
+  "result": "minecraft:baked_potato",
+  "experience": 0.35,
+  "cookingtime": 100
+}

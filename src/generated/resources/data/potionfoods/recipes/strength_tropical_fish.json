@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "potionfoods",
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:tropical_fish"
+    },
+    "y": {
+      "type": "forge:nbt",
+      "item": "minecraft:potion",
+      "count": 1,
+      "nbt": "{Potion:\"minecraft:strength\"}"
+    }
+  },
+  "result": {
+    "item": "potionfoods:strength_tropical_fish",
+    "count": 8
+  }
+}

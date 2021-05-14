@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "potionfoods:weakness_mutton"
+  },
+  "result": "minecraft:cooked_mutton",
+  "experience": 0.35,
+  "cookingtime": 100
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "potionfoods",
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:pumpkin_pie"
+    },
+    "y": {
+      "type": "forge:nbt",
+      "item": "minecraft:potion",
+      "count": 1,
+      "nbt": "{Potion:\"minecraft:strong_healing\"}"
+    }
+  },
+  "result": {
+    "item": "potionfoods:strong_healing_pumpkin_pie",
+    "count": 8
+  }
+}

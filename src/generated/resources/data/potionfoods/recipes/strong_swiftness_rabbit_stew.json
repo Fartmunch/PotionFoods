@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "potionfoods",
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:rabbit_stew"
+    },
+    "y": {
+      "type": "forge:nbt",
+      "item": "minecraft:potion",
+      "count": 1,
+      "nbt": "{Potion:\"minecraft:strong_swiftness\"}"
+    }
+  },
+  "result": {
+    "item": "potionfoods:strong_swiftness_rabbit_stew",
+    "count": 8
+  }
+}

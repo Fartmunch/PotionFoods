@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "potionfoods",
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "y": {
+      "type": "forge:nbt",
+      "item": "minecraft:potion",
+      "count": 1,
+      "nbt": "{Potion:\"minecraft:turtle_master\"}"
+    }
+  },
+  "result": {
+    "item": "potionfoods:turtle_master_rotten_flesh",
+    "count": 8
+  }
+}

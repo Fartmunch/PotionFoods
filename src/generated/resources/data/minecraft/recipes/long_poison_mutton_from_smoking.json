@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "potionfoods:long_poison_mutton"
+  },
+  "result": "minecraft:cooked_mutton",
+  "experience": 0.35,
+  "cookingtime": 100
+}

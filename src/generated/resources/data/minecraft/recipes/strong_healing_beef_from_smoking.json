@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "potionfoods:strong_healing_beef"
+  },
+  "result": "minecraft:cooked_beef",
+  "experience": 0.35,
+  "cookingtime": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "potionfoods:long_turtle_master_rabbit"
+  },
+  "result": "minecraft:cooked_rabbit",
+  "experience": 0.35,
+  "cookingtime": 100
+}

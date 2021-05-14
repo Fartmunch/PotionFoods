@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "potionfoods:long_fire_resistance_salmon"
+  },
+  "result": "minecraft:cooked_salmon",
+  "experience": 0.35,
+  "cookingtime": 200
+}

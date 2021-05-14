@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "potionfoods:thick_porkchop"
+  },
+  "result": "minecraft:cooked_porkchop",
+  "experience": 0.35,
+  "cookingtime": 200
+}

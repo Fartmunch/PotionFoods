@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "potionfoods:long_poison_porkchop"
+  },
+  "result": "minecraft:cooked_porkchop",
+  "experience": 0.35,
+  "cookingtime": 200
+}

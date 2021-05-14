@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "potionfoods:strong_slowness_beef"
+  },
+  "result": "minecraft:cooked_beef",
+  "experience": 0.35,
+  "cookingtime": 200
+}
