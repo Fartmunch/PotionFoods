@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "potionfoods:mundane_potato"
-  },
-  "result": "minecraft:baked_potato",
-  "experience": 0.35,
-  "cookingtime": 100
-}

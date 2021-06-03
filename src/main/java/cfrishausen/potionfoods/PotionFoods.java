@@ -28,7 +28,7 @@ public class PotionFoods {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public PotionFoods() {
-        ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModBlocks.init();
+        ModItems.init();
     }
 }

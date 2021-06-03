@@ -7,6 +7,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.potion.Potion;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -14,25 +15,19 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, PotionFoods.MOD_ID);
 
 
-    public static RegistryObject<Block> createCakeBlock(String name) {
-        return BLOCKS.register(name, () -> new Block(AbstractBlock.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL)));
+    public static RegistryObject<Block> createCakeBlock(String name, Potion potion) {
+        return BLOCKS.register(name, () -> new PotionFoodCake(AbstractBlock.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL), potion));
 
-//    public static RegistryObject<Block> createCakeBlock(String name) {
-//        return BLOCKS.register(name, () -> {
-//            return new Block(AbstractBlock.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL));
-//        });
-
-//        Data.NEW_CAKE_BLOCKS.add(cake);
     }
 
-    public static final RegistryObject<Block> TEST = BLOCKS.register("test",
-            () -> new Block(AbstractBlock.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL)));
+    public static void init() {
+        ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
-    static {
+
         for (Potion potion: ModItems.POTION_EFFECTS) {
-            RegistryObject<Block> cake = createCakeBlock(potion.getRegistryName().getPath()+"_cake_block");
+            RegistryObject<Block> cake = createCakeBlock(potion.getRegistryName().getPath()+"_cake_block", potion);
             Data.NEW_CAKE_BLOCKS.add(cake);
-            System.out.println(cake.getId() + "HEHEHEHEHEHEHEHEHEHEHEH");
+            Data.CAKES_WITH_POTIONS.put(cake, potion);
         }
     }
 }

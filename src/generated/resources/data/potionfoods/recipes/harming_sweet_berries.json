@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "potionfoods",
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:sweet_berries"
+    },
+    "y": {
+      "type": "forge:nbt",
+      "item": "minecraft:potion",
+      "count": 1,
+      "nbt": "{Potion:\"minecraft:harming\"}"
+    }
+  },
+  "result": {
+    "item": "potionfoods:harming_sweet_berries",
+    "count": 8
+  }
+}

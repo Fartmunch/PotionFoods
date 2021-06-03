@@ -1,8 +1,6 @@
 package cfrishausen.potionfoods.data;
 
-import cfrishausen.potionfoods.ModBlocks;
 import cfrishausen.potionfoods.ModItems;
-import cfrishausen.potionfoods.PotionFoodCake;
 import cfrishausen.potionfoods.PotionFoodItem;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -20,6 +18,9 @@ import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import java.util.List;
 import java.util.Map;
 
+//See examples for DataGeneration
+//https://github.com/MinecraftForge/MinecraftForge/blob/1.16.x/src/test/java/net/minecraftforge/debug/DataGeneratorTest.java#L325-L652
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Data {
 
@@ -28,9 +29,10 @@ public class Data {
         DataGenerator gen = event.getGenerator();
         ExistingFileHelper helper = event.getExistingFileHelper();
 
-        gen.addProvider(new CraftRecipe(gen));
-        gen.addProvider(new Items(gen, event.getExistingFileHelper()));
-        gen.addProvider(new Names(gen, event.getExistingFileHelper()));
+        gen.addProvider(new PotionRecipeProvider(gen));
+        gen.addProvider(new PotionItemModelProvider(gen, helper));
+        gen.addProvider(new PotionLanguageProvider(gen, helper));
+        gen.addProvider(new PotionBlockStateProvider(gen, helper));
     }
 
     public static final List<RegistryObject<PotionFoodItem>> NEW_ITEMS = Lists.newArrayList();
@@ -40,7 +42,6 @@ public class Data {
     public static final Map<RegistryObject<PotionFoodItem>, Item> BASE_FOODS = Maps.newHashMap();
     public static final Map<RegistryObject<PotionFoodItem>, String> BASE_FOOD_NAMES = Maps.newHashMap();
     public static final Map<RegistryObject<PotionFoodItem>, String> EFFECT_NAMES = Maps.newHashMap();
-
-
+    public static final Map<RegistryObject<Block>, Potion> CAKES_WITH_POTIONS = Maps.newHashMap();
 
 }
