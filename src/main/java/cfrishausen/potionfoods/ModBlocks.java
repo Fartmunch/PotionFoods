@@ -1,13 +1,13 @@
 package cfrishausen.potionfoods;
 
 import cfrishausen.potionfoods.data.Data;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.potion.Potion;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.item.alchemy.Potion;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -16,7 +16,7 @@ public class ModBlocks {
 
 
     public static RegistryObject<Block> createCakeBlock(String name, Potion potion) {
-        return BLOCKS.register(name, () -> new PotionFoodCake(AbstractBlock.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL), potion));
+        return BLOCKS.register(name, () -> new PotionFoodCake(BlockBehaviour.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL), potion));
 
     }
 

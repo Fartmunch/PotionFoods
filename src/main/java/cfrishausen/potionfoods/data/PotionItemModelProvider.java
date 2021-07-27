@@ -3,11 +3,11 @@ package cfrishausen.potionfoods.data;
 import cfrishausen.potionfoods.PotionFoodItem;
 import cfrishausen.potionfoods.PotionFoods;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.item.BlockItem;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 
 public class PotionItemModelProvider extends ItemModelProvider {
 

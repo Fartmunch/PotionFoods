@@ -1,17 +1,17 @@
 package cfrishausen.potionfoods;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.CakeBlock;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.CakeBlock;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.stats.Stats;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.World;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 
 public class PotionFoodCake extends CakeBlock {
     public PotionFoodCake(Properties p_i48527_2_, Potion potion) {
@@ -25,24 +25,26 @@ public class PotionFoodCake extends CakeBlock {
         return potion;
 
     }
-    public ActionResultType use(BlockState state, World level, BlockPos pos, PlayerEntity playerIn, Hand hand, BlockRayTraceResult p_225533_6_) {
+
+    @Override
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player playerIn, InteractionHand hand, BlockHitResult p_225533_6_) {
         if (level.isClientSide) {
             ItemStack itemstack = playerIn.getItemInHand(hand);
-            if (this.eat(level, pos, state, playerIn).consumesAction()) {
-                return ActionResultType.SUCCESS;
+            if (this.eatPotionCake(level, pos, state, playerIn).consumesAction()) {
+                return InteractionResult.SUCCESS;
             }
 
             if (itemstack.isEmpty()) {
-                return ActionResultType.CONSUME;
+                return InteractionResult.CONSUME;
             }
         }
 
-        return this.eat(level, pos, state, playerIn);
+        return this.eatPotionCake(level, pos, state, playerIn);
     }
 
-    private ActionResultType eat(IWorld level, BlockPos pos, BlockState state, PlayerEntity playerIn) {
+    private InteractionResult eatPotionCake(LevelAccessor level, BlockPos pos, BlockState state, Player playerIn) {
         if (!playerIn.canEat(false)) {
-            return ActionResultType.PASS;
+            return InteractionResult.PASS;
         } else {
             playerIn.awardStat(Stats.EAT_CAKE_SLICE);
             playerIn.getFoodData().eat(2, 0.1F);
@@ -58,7 +60,7 @@ public class PotionFoodCake extends CakeBlock {
                 level.removeBlock(pos, false);
             }
 
-            return ActionResultType.SUCCESS;
+            return InteractionResult.SUCCESS;
         }
     }
 }

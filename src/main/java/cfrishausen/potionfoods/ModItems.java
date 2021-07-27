@@ -2,22 +2,26 @@ package cfrishausen.potionfoods;
 
 import cfrishausen.potionfoods.data.Data;
 import com.google.common.collect.Lists;
-import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.*;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.Potions;
-import net.minecraftforge.fml.RegistryObject;
+
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.rmi.registry.Registry;
 import java.util.List;
 import java.util.function.Supplier;
+
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 
 public class ModItems {
 
@@ -104,23 +108,23 @@ public class ModItems {
             );
 
     // Function to create food in registry
-    public static RegistryObject<PotionFoodItem> createFood(String name, int nutritionValue, float saturationValue, Supplier<EffectInstance> effect, Potion potion) {
+    public static RegistryObject<PotionFoodItem> createFood(String name, int nutritionValue, float saturationValue, Supplier<MobEffectInstance> effect, Potion potion) {
         return ITEMS.register(name, () -> {
-            return new PotionFoodItem(new Item.Properties().food(new Food.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).build()).tab(ItemGroup.TAB_FOOD), potion);
+            return new PotionFoodItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).build()).tab(CreativeModeTab.TAB_FOOD), potion);
         });
 
     }
 
-    public static RegistryObject<PotionFoodItem> createGoldenCarrot(String name, int nutritionValue, float saturationValue, Supplier<EffectInstance> effect, Potion potion) {
+    public static RegistryObject<PotionFoodItem> createGoldenCarrot(String name, int nutritionValue, float saturationValue, Supplier<MobEffectInstance> effect, Potion potion) {
         return ITEMS.register(name, () -> {
-            return new PotionFoodItem(new Item.Properties().food(new Food.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).build()).tab(ItemGroup.TAB_BREWING), potion);
+            return new PotionFoodItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).build()).tab(CreativeModeTab.TAB_BREWING), potion);
         });
 
     }
 
-    public static RegistryObject<PotionFoodItem> createGoldenApple(String name, int nutritionValue, float saturationValue, Supplier<EffectInstance> effect, Potion potion) {
+    public static RegistryObject<PotionFoodItem> createGoldenApple(String name, int nutritionValue, float saturationValue, Supplier<MobEffectInstance> effect, Potion potion) {
         return ITEMS.register(name, () -> {
-            return new PotionFoodItem(new Item.Properties().food(new Food.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).effect(new EffectInstance(Effects.REGENERATION, 100, 1), 1.0F).effect(new EffectInstance(Effects.ABSORPTION, 2400, 0), 1.0F).alwaysEat().build()).tab(ItemGroup.TAB_FOOD), potion);
+            return new PotionFoodItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).effect(new MobEffectInstance(MobEffects.REGENERATION, 100, 1), 1.0F).effect(new MobEffectInstance(MobEffects.ABSORPTION, 2400, 0), 1.0F).alwaysEat().build()).tab(CreativeModeTab.TAB_FOOD), potion);
         });
 
     }
@@ -131,23 +135,23 @@ public class ModItems {
 
 
 
-    public static RegistryObject<PotionFoodItem> createTurtleFood(String name, int nutritionValue, float saturationValue, Supplier<EffectInstance> effect, Supplier<EffectInstance> effect2, Potion potion) {
+    public static RegistryObject<PotionFoodItem> createTurtleFood(String name, int nutritionValue, float saturationValue, Supplier<MobEffectInstance> effect, Supplier<MobEffectInstance> effect2, Potion potion) {
         return ITEMS.register(name, () -> {
-            return new PotionFoodItem(new Item.Properties().food(new Food.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).effect(effect2, 1.0F).build()).tab(ItemGroup.TAB_FOOD), potion);
+            return new PotionFoodItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).effect(effect2, 1.0F).build()).tab(CreativeModeTab.TAB_FOOD), potion);
         });
 
     }
 
-    public static RegistryObject<PotionFoodItem> createTurtleGoldenCarrot(String name, int nutritionValue, float saturationValue, Supplier<EffectInstance> effect, Supplier<EffectInstance> effect2, Potion potion) {
+    public static RegistryObject<PotionFoodItem> createTurtleGoldenCarrot(String name, int nutritionValue, float saturationValue, Supplier<MobEffectInstance> effect, Supplier<MobEffectInstance> effect2, Potion potion) {
         return ITEMS.register(name, () -> {
-            return new PotionFoodItem(new Item.Properties().food(new Food.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).effect(effect2, 1.0F).build()).tab(ItemGroup.TAB_BREWING), potion);
+            return new PotionFoodItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).effect(effect2, 1.0F).build()).tab(CreativeModeTab.TAB_BREWING), potion);
         });
 
     }
 
-    public static RegistryObject<PotionFoodItem> createTurtleGoldenApple(String name, int nutritionValue, float saturationValue, Supplier<EffectInstance> effect, Supplier<EffectInstance> effect2, Potion potion) {
+    public static RegistryObject<PotionFoodItem> createTurtleGoldenApple(String name, int nutritionValue, float saturationValue, Supplier<MobEffectInstance> effect, Supplier<MobEffectInstance> effect2, Potion potion) {
         return ITEMS.register(name, () -> {
-            return new PotionFoodItem(new Item.Properties().food(new Food.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).effect(effect2, 1.0F).effect(new EffectInstance(Effects.REGENERATION, 100, 1), 1.0F).effect(new EffectInstance(Effects.ABSORPTION, 2400, 0), 1.0F).alwaysEat().build()).tab(ItemGroup.TAB_FOOD), potion);
+            return new PotionFoodItem(new Item.Properties().food(new FoodProperties.Builder().nutrition(nutritionValue).saturationMod(saturationValue).effect(effect, 1.0F).effect(effect2, 1.0F).effect(new MobEffectInstance(MobEffects.REGENERATION, 100, 1), 1.0F).effect(new MobEffectInstance(MobEffects.ABSORPTION, 2400, 0), 1.0F).alwaysEat().build()).tab(CreativeModeTab.TAB_FOOD), potion);
         });
 
     }
@@ -158,7 +162,7 @@ public class ModItems {
 
 
     public static RegistryObject<BlockItem> createCakeItem(String name, RegistryObject<Block> block) {
-        return ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ItemGroup.TAB_FOOD)));
+        return ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
     }
 
     // Loops over each item in FOODS and then applies each effect from POTION_EFFECTS.
@@ -170,13 +174,13 @@ public class ModItems {
 
         for (Item item : FOODS) {
             String foodName = item.getRegistryName().getPath();
-            Food food = item.getFoodProperties();
+            FoodProperties food = item.getFoodProperties();
 
             for (Potion potion : POTION_EFFECTS) {
                 String potionName = potion.getRegistryName().getPath();
                 // Makes an item name matching minecraft naming convention
                 String itemName = potionName + "_" + foodName;
-                Supplier<EffectInstance> effectInstanceSupplier = null;
+                Supplier<MobEffectInstance> effectInstanceSupplier = null;
                 RegistryObject<PotionFoodItem> object = null;
                 // Makes sure that the Turtle potions get both potion effect instances
                 if (potion == Potions.TURTLE_MASTER || potion == Potions.LONG_TURTLE_MASTER || potion == Potions.STRONG_TURTLE_MASTER) {

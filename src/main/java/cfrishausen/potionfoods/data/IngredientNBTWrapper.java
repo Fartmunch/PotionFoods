@@ -1,6 +1,6 @@
 package cfrishausen.potionfoods.data;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.crafting.NBTIngredient;
 
 public class IngredientNBTWrapper extends NBTIngredient {

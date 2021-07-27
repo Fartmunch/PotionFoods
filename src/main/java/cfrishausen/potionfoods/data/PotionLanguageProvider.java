@@ -3,11 +3,10 @@ package cfrishausen.potionfoods.data;
 import cfrishausen.potionfoods.PotionFoodItem;
 import cfrishausen.potionfoods.PotionFoods;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.item.BlockItem;
-import net.minecraft.world.World;
+import net.minecraft.world.item.BlockItem;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.data.LanguageProvider;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import org.apache.commons.lang3.text.WordUtils;
 
 public class PotionLanguageProvider extends LanguageProvider {

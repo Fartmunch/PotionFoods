@@ -1,8 +1,10 @@
 package cfrishausen.potionfoods;
 
-import net.minecraft.potion.Potion;
+import net.minecraft.world.item.alchemy.Potion;
 
-public class PotionFoodItem extends net.minecraft.item.SimpleFoiledItem {
+import net.minecraft.world.item.Item.Properties;
+
+public class PotionFoodItem extends net.minecraft.world.item.SimpleFoiledItem {
 
     protected final Potion potion;
 
