@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:swiftness_salmon"
+            "items": [
+              "potionfoods:swiftness_salmon"
+            ]
           }
         ]
       }

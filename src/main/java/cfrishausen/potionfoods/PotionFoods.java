@@ -2,6 +2,8 @@ package cfrishausen.potionfoods;
 
 
 
+import cfrishausen.potionfoods.registry.ModBlocks;
+import cfrishausen.potionfoods.registry.ModItems;
 import net.minecraftforge.fml.common.Mod;
 
 import org.apache.logging.log4j.LogManager;

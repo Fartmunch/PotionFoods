@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:regeneration_beef"
+            "items": [
+              "potionfoods:regeneration_beef"
+            ]
           }
         ]
       }

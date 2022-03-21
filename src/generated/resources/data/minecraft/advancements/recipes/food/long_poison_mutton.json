@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:long_poison_mutton"
+            "items": [
+              "potionfoods:long_poison_mutton"
+            ]
           }
         ]
       }

@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:regeneration_rabbit"
+            "items": [
+              "potionfoods:regeneration_rabbit"
+            ]
           }
         ]
       }

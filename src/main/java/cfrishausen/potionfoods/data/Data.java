@@ -1,7 +1,7 @@
 package cfrishausen.potionfoods.data;
 
-import cfrishausen.potionfoods.ModItems;
-import cfrishausen.potionfoods.PotionFoodItem;
+import cfrishausen.potionfoods.registry.ModItems;
+import cfrishausen.potionfoods.items.PotionFoodItem;
 import cfrishausen.potionfoods.PotionFoods;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;

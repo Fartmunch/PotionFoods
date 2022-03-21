@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:leaping_porkchop"
+            "items": [
+              "potionfoods:leaping_porkchop"
+            ]
           }
         ]
       }

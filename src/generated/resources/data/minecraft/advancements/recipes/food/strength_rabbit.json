@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:strength_rabbit"
+            "items": [
+              "potionfoods:strength_rabbit"
+            ]
           }
         ]
       }

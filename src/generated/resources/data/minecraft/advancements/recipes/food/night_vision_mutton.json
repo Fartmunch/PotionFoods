@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:night_vision_mutton"
+            "items": [
+              "potionfoods:night_vision_mutton"
+            ]
           }
         ]
       }

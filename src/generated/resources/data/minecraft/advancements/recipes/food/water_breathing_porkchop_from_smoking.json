@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:water_breathing_porkchop"
+            "items": [
+              "potionfoods:water_breathing_porkchop"
+            ]
           }
         ]
       }

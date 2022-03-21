@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:invisibility_porkchop"
+            "items": [
+              "potionfoods:invisibility_porkchop"
+            ]
           }
         ]
       }

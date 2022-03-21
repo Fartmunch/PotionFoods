@@ -1,7 +1,8 @@
 package cfrishausen.potionfoods.data;
 
-import cfrishausen.potionfoods.PotionFoodItem;
+import cfrishausen.potionfoods.items.PotionFoodItem;
 import cfrishausen.potionfoods.PotionFoods;
+import cfrishausen.potionfoods.registry.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
@@ -17,6 +18,9 @@ public class PotionItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+
+        singleTexture(ModItems.MENU_BREAD.get().getRegistryName().getPath(), new ResourceLocation("item/generated"),
+                "layer0", new ResourceLocation("minecraft", "item/" + "bread"));
 
         for (RegistryObject<PotionFoodItem> item : Data.NEW_ITEMS) {
             singleTexture(item.get().getRegistryName().getPath(), new ResourceLocation("item/generated"),

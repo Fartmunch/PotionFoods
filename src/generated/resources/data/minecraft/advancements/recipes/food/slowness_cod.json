@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:slowness_cod"
+            "items": [
+              "potionfoods:slowness_cod"
+            ]
           }
         ]
       }

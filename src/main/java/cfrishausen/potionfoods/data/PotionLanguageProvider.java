@@ -1,6 +1,6 @@
 package cfrishausen.potionfoods.data;
 
-import cfrishausen.potionfoods.PotionFoodItem;
+import cfrishausen.potionfoods.items.PotionFoodItem;
 import cfrishausen.potionfoods.PotionFoods;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.BlockItem;
@@ -49,5 +49,7 @@ public class PotionLanguageProvider extends LanguageProvider {
         for (RegistryObject<BlockItem> createdCake : Data.NEW_CAKE_BLOCK_ITEMS) {
             addItem(createdCake, convertSyntax(createdCake.getId().getPath(), "", true));
         }
+
+        add("itemGroup.potionfoods_tab", "Potion Foods");
     }
 }

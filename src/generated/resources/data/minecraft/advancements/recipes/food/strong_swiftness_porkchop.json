@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:strong_swiftness_porkchop"
+            "items": [
+              "potionfoods:strong_swiftness_porkchop"
+            ]
           }
         ]
       }

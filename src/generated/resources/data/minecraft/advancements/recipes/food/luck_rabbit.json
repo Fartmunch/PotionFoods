@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:luck_rabbit"
+            "items": [
+              "potionfoods:luck_rabbit"
+            ]
           }
         ]
       }

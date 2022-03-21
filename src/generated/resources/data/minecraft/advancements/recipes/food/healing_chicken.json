@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:healing_chicken"
+            "items": [
+              "potionfoods:healing_chicken"
+            ]
           }
         ]
       }

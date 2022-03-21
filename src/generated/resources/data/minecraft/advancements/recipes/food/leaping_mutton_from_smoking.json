@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:leaping_mutton"
+            "items": [
+              "potionfoods:leaping_mutton"
+            ]
           }
         ]
       }

@@ -1,7 +1,6 @@
 package cfrishausen.potionfoods.data;
 
-import cfrishausen.potionfoods.PotionFoodCake;
-import cfrishausen.potionfoods.PotionFoodItem;
+import cfrishausen.potionfoods.items.PotionFoodItem;
 import com.google.common.collect.Maps;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.data.*;

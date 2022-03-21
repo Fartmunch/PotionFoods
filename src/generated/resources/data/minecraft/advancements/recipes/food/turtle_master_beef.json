@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:turtle_master_beef"
+            "items": [
+              "potionfoods:turtle_master_beef"
+            ]
           }
         ]
       }

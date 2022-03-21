@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "potionfoods:long_fire_resistance_cod"
+            "items": [
+              "potionfoods:long_fire_resistance_cod"
+            ]
           }
         ]
       }
