@@ -13,7 +13,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 
-version = '4.1'
+version = '4.2'
 group = 'com.yourname.potionfoods' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'potionfoods'
 

@@ -63,6 +63,7 @@ public class ModItems {
             Items.BEETROOT,
             Items.BEETROOT_SOUP,
             Items.SWEET_BERRIES,
+            Items.GLOW_BERRIES,
             Items.HONEY_BOTTLE,
             Items.GOLDEN_CARROT
             );
