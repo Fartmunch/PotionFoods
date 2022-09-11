@@ -1,24 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "potionfoods",
-  "pattern": [
-    "xxx",
-    "xyx",
-    "xxx"
-  ],
   "key": {
     "x": {
       "item": "minecraft:beef"
     },
     "y": {
       "type": "forge:nbt",
-      "item": "minecraft:potion",
       "count": 1,
+      "item": "minecraft:potion",
       "nbt": "{Potion:\"minecraft:long_invisibility\"}"
     }
   },
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
   "result": {
-    "item": "potionfoods:long_invisibility_beef",
-    "count": 8
+    "count": 8,
+    "item": "potionfoods:long_invisibility_beef"
   }
 }

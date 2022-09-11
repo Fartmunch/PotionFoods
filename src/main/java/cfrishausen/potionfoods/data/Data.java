@@ -30,10 +30,10 @@ public class Data {
         DataGenerator gen = event.getGenerator();
         ExistingFileHelper helper = event.getExistingFileHelper();
 
-        gen.addProvider(new PotionRecipeProvider(gen));
-        gen.addProvider(new PotionItemModelProvider(gen, helper));
-        gen.addProvider(new PotionLanguageProvider(gen, helper));
-        gen.addProvider(new PotionBlockStateProvider(gen, helper));
+        gen.addProvider(true, new PotionRecipeProvider(gen));
+        gen.addProvider(true, new PotionItemModelProvider(gen, helper));
+        gen.addProvider(true, new PotionLanguageProvider(gen, helper));
+        gen.addProvider(true, new PotionBlockStateProvider(gen, helper));
     }
 
     public static final List<RegistryObject<PotionFoodItem>> NEW_ITEMS = Lists.newArrayList();

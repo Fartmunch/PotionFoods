@@ -1,24 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "potionfoods",
-  "pattern": [
-    "xxx",
-    "xyx",
-    "xxx"
-  ],
   "key": {
     "x": {
       "item": "minecraft:mushroom_stew"
     },
     "y": {
       "type": "forge:nbt",
-      "item": "minecraft:potion",
       "count": 1,
+      "item": "minecraft:potion",
       "nbt": "{Potion:\"minecraft:strength\"}"
     }
   },
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
   "result": {
-    "item": "potionfoods:strength_mushroom_stew",
-    "count": 8
+    "count": 8,
+    "item": "potionfoods:strength_mushroom_stew"
   }
 }

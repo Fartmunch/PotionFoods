@@ -4,8 +4,8 @@
   "ingredients": [
     {
       "type": "forge:nbt",
-      "item": "minecraft:potion",
       "count": 1,
+      "item": "minecraft:potion",
       "nbt": "{Potion:\"minecraft:long_leaping\"}"
     },
     {

@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smoking",
+  "cookingtime": 100,
+  "experience": 0.35,
   "ingredient": {
     "item": "potionfoods:regeneration_porkchop"
   },
-  "result": "minecraft:cooked_porkchop",
-  "experience": 0.35,
-  "cookingtime": 100
+  "result": "minecraft:cooked_porkchop"
 }

@@ -104,10 +104,10 @@ public class PotionRecipeProvider extends RecipeProvider {
             if (foodToCooked.containsKey(Data.BASE_FOODS.get(object))) {
                 SimpleCookingRecipeBuilder.smelting(Ingredient.of(object.get()), foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 200)
                         .unlockedBy("has_item", has(object.get()))
-                        .save(subConsumer, object.get().getRegistryName().getPath());
+                        .save(subConsumer, object.getId().getPath());
                 SimpleCookingRecipeBuilder.cooking(Ingredient.of(object.get()), foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 100, RecipeSerializer.SMOKING_RECIPE)
                         .unlockedBy("has_item", has(object.get()))
-                        .save(subConsumer, object.get().getRegistryName().getPath() + "_from_smoking");
+                        .save(subConsumer, object.getId().getPath() + "_from_smoking");
             }
         }
     }

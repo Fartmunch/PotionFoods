@@ -38,7 +38,7 @@ public class PotionBlockStateProvider extends BlockStateProvider {
 
     private void generateBlockstateAndModels(RegistryObject<Block> cakeBlock, Map<Integer, ModelFile> cakeMap) {
         // Creates each of the 7 cake models
-        String path = cakeBlock.get().getRegistryName().getPath();
+        String path = cakeBlock.getId().getPath();
         ModelFile cake = models().getBuilder(path)
                 // mcLoc adds prefix "minecraft: for minecraft png locations"
                 .texture("particle", mcLoc("block/cake_side"))

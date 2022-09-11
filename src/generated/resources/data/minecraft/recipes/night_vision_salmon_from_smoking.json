@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "potionfoods:night_vision_salmon"
-  },
-  "result": "minecraft:cooked_salmon",
-  "experience": 0.35,
-  "cookingtime": 100
-}
