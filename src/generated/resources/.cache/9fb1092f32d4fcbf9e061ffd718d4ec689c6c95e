@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // 1.19	2022-06-23T11:52:51.9455103	Recipes
+=======
+// 1.19	2022-08-11T22:20:48.5536809	Recipes
+>>>>>>> master
 0c718fdf3ffa643f5ce42846848c73428ece8e53 data/minecraft/advancements/recipes/food/fire_resistance_beef.json
 0b0accf6fe877f868a72f144d0f05bd4b07738df data/minecraft/advancements/recipes/food/fire_resistance_beef_from_smoking.json
 31c77e88e29852b164f69cb6745e1738560986c8 data/minecraft/advancements/recipes/food/fire_resistance_chicken.json

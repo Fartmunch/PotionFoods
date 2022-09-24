@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // 1.19	2022-06-23T11:52:51.9405238	Block States: potionfoods
+=======
+// 1.19	2022-08-11T22:20:48.5998293	Block States: potionfoods
+>>>>>>> master
 ea9b21cec33f33d84f7fe42f4e8cb324a0c4e9ce assets/potionfoods/blockstates/fire_resistance_cake_block.json
 8e4e3b1b69f4d212bde97e6dfec7af4930f8546e assets/potionfoods/blockstates/harming_cake_block.json
 2959a89d845db28f085d8b3af7ea8479e8421c46 assets/potionfoods/blockstates/healing_cake_block.json
