@@ -1,24 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "potionfoods",
-  "pattern": [
-    "xxx",
-    "xyx",
-    "xxx"
-  ],
   "key": {
     "x": {
       "item": "minecraft:honey_bottle"
     },
     "y": {
       "type": "forge:nbt",
-      "item": "minecraft:potion",
       "count": 1,
+      "item": "minecraft:potion",
       "nbt": "{Potion:\"minecraft:invisibility\"}"
     }
   },
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
   "result": {
-    "item": "potionfoods:invisibility_honey_bottle",
-    "count": 8
+    "count": 8,
+    "item": "potionfoods:invisibility_honey_bottle"
   }
 }

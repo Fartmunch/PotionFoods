@@ -36,16 +36,18 @@ public class PotionBlockStateProvider extends BlockStateProvider {
     //See examples for DataGeneration
     //https://github.com/MinecraftForge/MinecraftForge/blob/1.16.x/src/test/java/net/minecraftforge/debug/DataGeneratorTest.java#L325-L652
 
+    // Creates each of the 7 cake models
     private void generateBlockstateAndModels(RegistryObject<Block> cakeBlock, Map<Integer, ModelFile> cakeMap) {
-        // Creates each of the 7 cake models
-        String path = cakeBlock.get().getRegistryName().getPath();
+
+        // Make the uneaten model
+        String path = cakeBlock.getId().getPath(); // CHANGE
         ModelFile cake = models().getBuilder(path)
                 // mcLoc adds prefix "minecraft: for minecraft png locations"
                 .texture("particle", mcLoc("block/cake_side"))
                 .texture("bottom", mcLoc("block/cake_bottom"))
                 .texture("top", "potionfoods:block/cake_top")
                 .texture("side", mcLoc("block/cake_side"))
-                .texture("inside", mcLoc("block/cake_inner"))
+                //.texture("inside", mcLoc("block/cake_inner"))
                 .element()
                 .from(1F, 0F, 1F)
                 .to(15F, 8F, 15F)
@@ -53,12 +55,13 @@ public class PotionBlockStateProvider extends BlockStateProvider {
                 .face(Direction.UP).texture("#top").end()
                 .face(Direction.NORTH).texture("#side").end()
                 .face(Direction.SOUTH).texture("#side").end()
-                .face(Direction.WEST).texture("#inside").end()
+                .face(Direction.WEST).texture("#side").end()
                 .face(Direction.EAST).texture("#side").end()
                 .end();
 
         cakeMap.put(0, cake);
 
+        // Make each of the partially eaten models
         for (int i = 1; i < 7; i++) {
             ModelFile cakeSliceX = models().getBuilder(path + "_slice" + i)
                     .texture("particle", mcLoc("block/cake_side"))

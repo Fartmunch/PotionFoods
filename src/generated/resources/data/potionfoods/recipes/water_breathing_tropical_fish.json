@@ -1,24 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "potionfoods",
-  "pattern": [
-    "xxx",
-    "xyx",
-    "xxx"
-  ],
   "key": {
     "x": {
       "item": "minecraft:tropical_fish"
     },
     "y": {
       "type": "forge:nbt",
-      "item": "minecraft:potion",
       "count": 1,
+      "item": "minecraft:potion",
       "nbt": "{Potion:\"minecraft:water_breathing\"}"
     }
   },
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
   "result": {
-    "item": "potionfoods:water_breathing_tropical_fish",
-    "count": 8
+    "count": 8,
+    "item": "potionfoods:water_breathing_tropical_fish"
   }
 }

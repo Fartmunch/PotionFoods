@@ -6,6 +6,7 @@ import cfrishausen.potionfoods.items.PotionFoodCreativeTab;
 import cfrishausen.potionfoods.items.PotionFoodItem;
 import com.google.common.collect.Lists;
 
+import net.minecraft.core.Registry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.alchemy.Potion;
@@ -173,11 +174,11 @@ public class ModItems {
 
 
         for (Item item : FOODS) {
-            String foodName = item.getRegistryName().getPath();
+            String foodName = Registry.ITEM.getKey(item).getPath(); // CHANGE
             FoodProperties food = item.getFoodProperties();
 
             for (Potion potion : POTION_EFFECTS) {
-                String potionName = potion.getRegistryName().getPath();
+                String potionName = Registry.POTION.getKey(potion).getPath(); // CHANGE
                 // Makes an item name matching minecraft naming convention
                 String itemName = potionName + "_" + foodName;
                 Supplier<MobEffectInstance> effectInstanceSupplier = null;

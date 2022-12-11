@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "potionfoods:long_invisibility_rabbit"
+  },
+  "result": "minecraft:cooked_rabbit"
+}

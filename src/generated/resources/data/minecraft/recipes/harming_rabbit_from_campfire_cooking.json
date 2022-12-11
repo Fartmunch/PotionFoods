@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "potionfoods:harming_rabbit"
+  },
+  "result": "minecraft:cooked_rabbit"
+}

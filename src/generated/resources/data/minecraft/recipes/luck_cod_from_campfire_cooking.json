@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "potionfoods:luck_cod"
+  },
+  "result": "minecraft:cooked_cod"
+}

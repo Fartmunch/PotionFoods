@@ -3,6 +3,7 @@ package cfrishausen.potionfoods.registry;
 import cfrishausen.potionfoods.PotionFoods;
 import cfrishausen.potionfoods.blocks.PotionFoodCake;
 import cfrishausen.potionfoods.data.Data;
+import net.minecraft.core.Registry;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -27,7 +28,7 @@ public class ModBlocks {
 
 
         for (Potion potion: ModItems.POTION_EFFECTS) {
-            RegistryObject<Block> cake = createCakeBlock(potion.getRegistryName().getPath()+"_cake_block", potion);
+            RegistryObject<Block> cake = createCakeBlock(Registry.POTION.getKey(potion).getPath() + "_cake_block", potion); // CHANGE
             Data.NEW_CAKE_BLOCKS.add(cake);
             Data.CAKES_WITH_POTIONS.put(cake, potion);
         }

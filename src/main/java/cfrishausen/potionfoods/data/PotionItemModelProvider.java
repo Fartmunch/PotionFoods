@@ -19,16 +19,16 @@ public class PotionItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
-        singleTexture(ModItems.MENU_BREAD.get().getRegistryName().getPath(), new ResourceLocation("item/generated"),
+        singleTexture(ModItems.MENU_BREAD.get().toString(), new ResourceLocation("item/generated"), // CHANGE
                 "layer0", new ResourceLocation("minecraft", "item/" + "bread"));
 
         for (RegistryObject<PotionFoodItem> item : Data.NEW_ITEMS) {
-            singleTexture(item.get().getRegistryName().getPath(), new ResourceLocation("item/generated"),
+            singleTexture(item.get().toString(), new ResourceLocation("item/generated"), // CHANGE
                     "layer0", new ResourceLocation("minecraft", "item/" + Data.BASE_FOOD_NAMES.get(item)));
         }
 
         for (RegistryObject<BlockItem> item : Data.NEW_CAKE_BLOCK_ITEMS) {
-            singleTexture(item.get().getRegistryName().getPath(), new ResourceLocation("item/generated"),
+            singleTexture(item.get().toString(), new ResourceLocation("item/generated"), // CHANGE
                     "layer0", new ResourceLocation("potionfoods", "item/" + "cake"));
         }
     }

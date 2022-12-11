@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "potionfoods:fire_resistance_salmon"
+  },
+  "result": "minecraft:cooked_salmon"
+}

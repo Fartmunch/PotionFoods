@@ -1,13 +1,27 @@
 {
-  "textures": {
-    "particle": "minecraft:block/cake_side",
-    "bottom": "minecraft:block/cake_bottom",
-    "top": "potionfoods:block/cake_top",
-    "side": "minecraft:block/cake_side",
-    "inside": "minecraft:block/cake_inner"
-  },
   "elements": [
     {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#bottom"
+        },
+        "east": {
+          "texture": "#side"
+        },
+        "north": {
+          "texture": "#side"
+        },
+        "south": {
+          "texture": "#side"
+        },
+        "up": {
+          "texture": "#top"
+        },
+        "west": {
+          "texture": "#inside"
+        }
+      },
       "from": [
         9,
         0,
@@ -17,28 +31,14 @@
         15,
         8,
         15
-      ],
-      "faces": {
-        "down": {
-          "texture": "#bottom",
-          "cullface": "down"
-        },
-        "up": {
-          "texture": "#top"
-        },
-        "north": {
-          "texture": "#side"
-        },
-        "south": {
-          "texture": "#side"
-        },
-        "west": {
-          "texture": "#inside"
-        },
-        "east": {
-          "texture": "#side"
-        }
-      }
+      ]
     }
-  ]
+  ],
+  "textures": {
+    "bottom": "minecraft:block/cake_bottom",
+    "inside": "minecraft:block/cake_inner",
+    "particle": "minecraft:block/cake_side",
+    "side": "minecraft:block/cake_side",
+    "top": "potionfoods:block/cake_top"
+  }
 }

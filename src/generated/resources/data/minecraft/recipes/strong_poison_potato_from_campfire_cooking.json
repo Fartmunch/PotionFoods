@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "potionfoods:strong_poison_potato"
+  },
+  "result": "minecraft:baked_potato"
+}

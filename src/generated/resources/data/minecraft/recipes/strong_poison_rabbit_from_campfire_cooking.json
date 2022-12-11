@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "potionfoods:strong_poison_rabbit"
+  },
+  "result": "minecraft:cooked_rabbit"
+}

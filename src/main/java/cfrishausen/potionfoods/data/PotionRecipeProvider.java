@@ -1,6 +1,7 @@
 package cfrishausen.potionfoods.data;
 
 import cfrishausen.potionfoods.items.PotionFoodItem;
+import cfrishausen.potionfoods.registry.ModItems;
 import com.google.common.collect.Maps;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.data.*;
@@ -104,10 +105,13 @@ public class PotionRecipeProvider extends RecipeProvider {
             if (foodToCooked.containsKey(Data.BASE_FOODS.get(object))) {
                 SimpleCookingRecipeBuilder.smelting(Ingredient.of(object.get()), foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 200)
                         .unlockedBy("has_item", has(object.get()))
-                        .save(subConsumer, object.get().getRegistryName().getPath());
-                SimpleCookingRecipeBuilder.cooking(Ingredient.of(object.get()), foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 100, RecipeSerializer.SMOKING_RECIPE)
+                        .save(subConsumer, object.getId().getPath()); // CHANGE
+                SimpleCookingRecipeBuilder.smoking(Ingredient.of(object.get()), foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 100)
                         .unlockedBy("has_item", has(object.get()))
-                        .save(subConsumer, object.get().getRegistryName().getPath() + "_from_smoking");
+                        .save(subConsumer, object.getId().getPath() + "_from_smoking"); // CHANGE
+                SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(object.get()), foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 100)
+                        .unlockedBy("has_item", has(object.get()))
+                        .save(subConsumer, object.getId().getPath() + "_from_campfire_cooking"); // CHANGE
             }
         }
     }
