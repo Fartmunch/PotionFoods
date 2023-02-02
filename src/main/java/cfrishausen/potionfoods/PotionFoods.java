@@ -2,6 +2,7 @@ package cfrishausen.potionfoods;
 
 
 
+import cfrishausen.potionfoods.event.EventHandler;
 import cfrishausen.potionfoods.registry.ModBlocks;
 import cfrishausen.potionfoods.registry.ModItems;
 import net.minecraftforge.fml.common.Mod;
@@ -21,5 +22,7 @@ public class PotionFoods {
     public PotionFoods() {
         ModBlocks.init();
         ModItems.init();
+
+        EventHandler.register();
     }
 }

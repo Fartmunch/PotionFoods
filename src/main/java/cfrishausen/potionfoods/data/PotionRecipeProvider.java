@@ -3,6 +3,7 @@ package cfrishausen.potionfoods.data;
 import cfrishausen.potionfoods.items.PotionFoodItem;
 import cfrishausen.potionfoods.registry.ModItems;
 import com.google.common.collect.Maps;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.data.*;
 import net.minecraft.world.item.BlockItem;
@@ -18,15 +19,10 @@ import net.minecraft.world.item.alchemy.PotionUtils;
 import java.util.Map;
 import java.util.function.Consumer;
 
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraftforge.registries.RegistryObject;
 
 public class PotionRecipeProvider extends RecipeProvider {
-    public PotionRecipeProvider(DataGenerator generatorIn) { super(generatorIn); }
+    public PotionRecipeProvider(DataGenerator generatorIn) { super(generatorIn.getPackOutput()); }
 
     // Turns the potion in to an ingredient that can be used for crafting.
     private static Ingredient makePotionIngredient(Potion potion) {
@@ -38,7 +34,7 @@ public class PotionRecipeProvider extends RecipeProvider {
     public static final Map<Potion, Ingredient> FOOD_INGREDIENTS = Maps.newHashMap();
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
         // Enters in the new ingredient into the map with key effect.
         for (Potion newEffect : Data.EFFECTS) {
@@ -64,7 +60,7 @@ public class PotionRecipeProvider extends RecipeProvider {
                     ingredient = FOOD_INGREDIENTS.get(Data.CAKES_WITH_POTIONS.get(block));
                 }
             }
-            ShapelessRecipeBuilder.shapeless(newCakeItem.get(), 1)
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, newCakeItem.get(), 1)
                     .requires(ingredient)
                     .requires(Items.CAKE)
                     .group("potionfoods")
@@ -76,7 +72,7 @@ public class PotionRecipeProvider extends RecipeProvider {
     }
 
     public static void createShapedRecipe(RegistryObject<PotionFoodItem> object, Item baseFood, Ingredient ingredient, Consumer<FinishedRecipe> subConsumer){
-        ShapedRecipeBuilder.shaped(object.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, object.get(), 8)
                 .pattern("xxx")
                 .pattern("xyx")
                 .pattern("xxx")
@@ -103,15 +99,15 @@ public class PotionRecipeProvider extends RecipeProvider {
         // Creates a furnace and smoker recipe for each new item, not including cakes.
         for (RegistryObject<PotionFoodItem> object : Data.NEW_ITEMS) {
             if (foodToCooked.containsKey(Data.BASE_FOODS.get(object))) {
-                SimpleCookingRecipeBuilder.smelting(Ingredient.of(object.get()), foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 200)
+                SimpleCookingRecipeBuilder.smelting(Ingredient.of(object.get()), RecipeCategory.FOOD, foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 200)
                         .unlockedBy("has_item", has(object.get()))
                         .save(subConsumer, object.getId().getPath()); // CHANGE
-                SimpleCookingRecipeBuilder.smoking(Ingredient.of(object.get()), foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 100)
+                SimpleCookingRecipeBuilder.smoking(Ingredient.of(object.get()), RecipeCategory.FOOD, foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 100)
                         .unlockedBy("has_item", has(object.get()))
-                        .save(subConsumer, object.getId().getPath() + "_from_smoking"); // CHANGE
-                SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(object.get()), foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 100)
+                        .save(subConsumer, object.getId().getPath() + "_from_smoking");
+                SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(object.get()), RecipeCategory.FOOD, foodToCooked.get(Data.BASE_FOODS.get(object)), 0.35F, 100)
                         .unlockedBy("has_item", has(object.get()))
-                        .save(subConsumer, object.getId().getPath() + "_from_campfire_cooking"); // CHANGE
+                        .save(subConsumer, object.getId().getPath() + "_from_campfire_cooking");
             }
         }
     }
