@@ -2,6 +2,7 @@ package cfrishausen.potionfoods.data;
 
 import cfrishausen.potionfoods.PotionFoods;
 import com.google.common.collect.Maps;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.CakeBlock;
@@ -18,8 +19,8 @@ import java.util.Map;
 
 public class PotionBlockStateProvider extends BlockStateProvider {
 
-    public PotionBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, PotionFoods.MOD_ID, exFileHelper);
+    public PotionBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, PotionFoods.MOD_ID, exFileHelper);
     }
 
     @Override

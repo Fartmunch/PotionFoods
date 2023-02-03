@@ -4,6 +4,7 @@ import cfrishausen.potionfoods.items.PotionFoodItem;
 import cfrishausen.potionfoods.PotionFoods;
 import cfrishausen.potionfoods.registry.ModItems;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -12,8 +13,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class PotionItemModelProvider extends ItemModelProvider {
 
-    public PotionItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, PotionFoods.MOD_ID, existingFileHelper);
+    public PotionItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, PotionFoods.MOD_ID, existingFileHelper);
     }
 
     @Override

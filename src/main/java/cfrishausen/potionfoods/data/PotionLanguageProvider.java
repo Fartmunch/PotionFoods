@@ -3,6 +3,7 @@ package cfrishausen.potionfoods.data;
 import cfrishausen.potionfoods.items.PotionFoodItem;
 import cfrishausen.potionfoods.PotionFoods;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.BlockItem;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -11,8 +12,8 @@ import org.apache.commons.lang3.text.WordUtils;
 
 public class PotionLanguageProvider extends LanguageProvider {
 
-    public PotionLanguageProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, PotionFoods.MOD_ID, "en_us");
+    public PotionLanguageProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, PotionFoods.MOD_ID, "en_us");
     }
 
     // Used to make the player visible name in the correct syntax.

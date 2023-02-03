@@ -14,8 +14,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class EventHandler {
 
     public static void register() {
-        IEventBus forge = MinecraftForge.EVENT_BUS;
-        forge.addListener(EventHandler::registerCreativeTabs);
+        IEventBus mod = FMLJavaModLoadingContext.get().getModEventBus();
+        mod.addListener(EventHandler::registerCreativeTabs);
     }
 
     public static void registerCreativeTabs(CreativeModeTabEvent.Register event) {

@@ -22,7 +22,7 @@ import java.util.function.Consumer;
 import net.minecraftforge.registries.RegistryObject;
 
 public class PotionRecipeProvider extends RecipeProvider {
-    public PotionRecipeProvider(DataGenerator generatorIn) { super(generatorIn.getPackOutput()); }
+    public PotionRecipeProvider(PackOutput output) { super(output); }
 
     // Turns the potion in to an ingredient that can be used for crafting.
     private static Ingredient makePotionIngredient(Potion potion) {
