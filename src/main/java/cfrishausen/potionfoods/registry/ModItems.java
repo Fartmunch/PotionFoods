@@ -232,16 +232,4 @@ public class ModItems {
             Data.NEW_CAKE_BLOCK_ITEMS.add(cakeBlockItem);
         }
     }
-
-    public static void addItemsToTab(CreativeModeTab.Output output) {
-        // Add all standard items for creative tab
-        for(RegistryObject<PotionFoodItem> item : Data.BASE_FOODS.keySet()) {
-            output.accept(item.get());
-        }
-
-        // Add cake items to creative tab
-        for(RegistryObject<BlockItem> cake : Data.NEW_CAKE_BLOCK_ITEMS) {
-            output.accept(cake.get());
-        }
-    }
 }

@@ -1443,5 +1443,5 @@
   "item.potionfoods.weakness_spider_eye": "Spider Eye of Weakness",
   "item.potionfoods.weakness_sweet_berries": "Sweet Berries of Weakness",
   "item.potionfoods.weakness_tropical_fish": "Tropical Fish of Weakness",
-  "itemGroup.potionfoods_tab": "Potion Foods"
+  "item_group.potionfoods.main": "Potion Foods"
 }

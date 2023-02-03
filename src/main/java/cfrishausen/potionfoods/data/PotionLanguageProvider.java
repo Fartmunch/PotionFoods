@@ -51,6 +51,6 @@ public class PotionLanguageProvider extends LanguageProvider {
             addItem(createdCake, convertSyntax(createdCake.getId().getPath(), "", true));
         }
 
-        add("itemGroup.potionfoods_tab", "Potion Foods");
+        add("item_group.potionfoods.main", "Potion Foods");
     }
 }
